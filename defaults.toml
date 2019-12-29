@@ -1,0 +1,13 @@
+ignoreGeneratedHeader = false
+severity = "warning"
+confidence = 0.8
+errorCode = 0
+warningCode = 0
+
+[rule.imports-blacklist]
+[rule.go-routines]
+[rule.read-after-write]
+[rule.blacklisted-chaincode-imports]
+[rule.phantom-reads]
+[rule.range-over-map]
+[rule.global-variables]
