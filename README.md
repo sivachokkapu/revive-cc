@@ -1,14 +1,15 @@
 # revive^CC
+revive^CC is a static analysis tool for Hyperledger Fabric smart contracts (chaincode) aimed at detecting security vulnerabilities.
 
-Installation guide:
+# Installation
 1. Place folder in the your $GOPATH/src/github.com/youraccount
 2. Go into directory sivachokkapu/revive-cc
 3. $ make install
 4. $ make build
 5. Move the revive file into $GOPATH/bin
 6. You should now be able to use revive commands
-7. $ revive {filename.go} - will analyse the file
-8. $ revive -formatter stylish {filename.go} - better output format
+7. $ revive {chaincodefilename.go} - will analyse the file
+8. $ revive -formatter stylish {chaincodefilename.go} - better output format
 9. $ revive - on a directory will analyse all files if from the same package
 
 
