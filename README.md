@@ -1,5 +1,5 @@
 # revive^CC
-revive^CC is a static analysis tool for Hyperledger Fabric smart contracts (chaincode) aimed at detecting security vulnerabilities.
+revive^CC is a static analysis tool for Hyperledger Fabric smart contracts (chaincode) aimed at detecting security vulnerabilities. The tool is an extension of the Go open source static analysis tool revive and was built using revive's framework. This tool was built for as a part of my dissertation project on 'Analysing Smart Contracts' at the University of Sheffield.
 
 # Installation
 1. Place folder in the your $GOPATH/src/github.com/youraccount
