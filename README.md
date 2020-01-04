@@ -2,7 +2,7 @@
 
 Installation guide:
 1. Place folder in the your $GOPATH/src/github.com/youraccount
-2. Go into directory siva98/revive
+2. Go into directory sivachokkapu/revive-cc
 3. $ make install
 4. $ make build
 5. Move the revive file into $GOPATH/bin
