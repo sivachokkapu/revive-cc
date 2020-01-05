@@ -16,7 +16,11 @@ revive^CC is a static analysis tool for Hyperledger Fabric smart contracts (chai
 2. $ revive -formatter stylish {chaincodefilename.go} - better output format
 3. $ revive - on a directory will analyse all files if from the same package
 
-![](assets/revive.png)
+<p align="center">
+  <img src="./assets/revive.png" alt="" width="600">
+  <br>
+  Using $ revive on a directory
+</p>
 
 [![Build Status](https://travis-ci.org/mgechev/revive.svg?branch=master)](https://travis-ci.org/mgechev/revive)
 
