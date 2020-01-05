@@ -33,7 +33,7 @@ To evaluate the performance of revive^CC, a variety of real case chaincode files
 
 ### Blacklisted chaincode imports
 <p align="center">
-  <img src="./assets/blacklistedimports.png" alt="" width="600">
+  <img src="./assets/blacklistedimports.png" alt="" width="500">
   <br>
   Example of blacklisted chaincode import vulnerability in chaincode
 </p>
@@ -42,7 +42,7 @@ One blacklisted library is the ‘time’ library. This library allows peers to 
 
 ### Global state variables
 <p align="center">
-  <img src="./assets/globalstate.png" alt="" width="600">
+  <img src="./assets/globalstate.png" alt="" width="500">
   <br>
   Example of global state variable vulnerability in chaincode
 </p>
@@ -50,7 +50,7 @@ Global variables are only global to a single peer as global variables are not tr
 
 ### Goroutines
 <p align="center">
-  <img src="./assets/goroutines.png" alt="" width="600">
+  <img src="./assets/goroutines.png" alt="" width="500">
   <br>
   Example of goroutines vulnerability in chaincode
 </p>
@@ -58,7 +58,7 @@ Goroutines introduce concurrency into chaincode. Which can then bring about non-
 
 ### Phantom read of ledger
 <p align="center">
-  <img src="./assets/phantomread.png" alt="" width="600">
+  <img src="./assets/phantomread.png" alt="" width="500">
   <br>
   Example of phantom read of ledger vulnerability in chaincode
 </p>
@@ -66,7 +66,7 @@ Getting data from the ledger using GetHistoryOfKey or GetQueryResult do not pass
 
 ### Range over map
 <p align="center">
-  <img src="./assets/rangeovermap.png" alt="" width="600">
+  <img src="./assets/rangeovermap.png" alt="" width="500">
   <br>
   Example of range over map vulnerability in chaincode
 </p>
@@ -74,7 +74,7 @@ The range keyword allows the ability to iterate through every element in various
 
 ### Read after write
 <p align="center">
-  <img src="./assets/readwrite.png" alt="" width="600">
+  <img src="./assets/readwrite.png" alt="" width="500">
   <br>
   Example of read after write vulnerability in chaincode
 </p>
