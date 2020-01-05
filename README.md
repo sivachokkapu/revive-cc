@@ -1,7 +1,7 @@
 # revive^CC
 **`revive^CC`** is a static analysis tool for Hyperledger Fabric smart contracts (chaincode) aimed at detecting blockchain related security vulnerabilities to help developers to write clean and safe smart contracts. **`revive^CC`** is one of the two existing static analysis tools for Hyperledger Fabric chaincode, with the other tool being <a href="https://chaincode.chainsecurity.com/">Chainsecurity's Chaincode Scanner</a> which can analyse chaincode files that meet certain requirements. What makes **`revive^CC`** special is that the tool has bought the accessibility of security analysis to ***any chaincode file***. This is something that has not been available until now.
 
-The tool is an extension of the open source Go static analysis tool for <a href="https://github.com/mgechev/revive">revive</a> and was built using revive's framework. It was built as a part of my dissertation project on 'Analysing Smart Contracts' at the University of Sheffield.
+The tool is an extension of the open source Go static analysis tool <a href="https://github.com/mgechev/revive">revive</a> and was built using revive's framework. It was built as a part of my dissertation project on 'Analysing Smart Contracts' at the University of Sheffield.
 
 
 ## Installation
@@ -81,10 +81,9 @@ The range keyword allows the ability to iterate through every element in various
 For a write to ledger statement to take effect, the transaction first must be committed and written to the ledger. Until then the value that has been written to will retain its old value. Which means that reading this value from the ledger will just return the old value which is likely not what is intended by the chaincode. This will lead to unexpected behaviour which may affect the execution of transactions and cause unintended results.
 
 
-[![Build Status](https://travis-ci.org/mgechev/revive.svg?branch=master)](https://travis-ci.org/mgechev/revive)
-
 
 ## License
 
 MIT
 
+[![Build Status](https://travis-ci.org/mgechev/revive.svg?branch=master)](https://travis-ci.org/mgechev/revive)
