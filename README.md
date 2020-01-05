@@ -35,7 +35,7 @@ To evaluate the performance of revive^CC, a variety of real case chaincode files
 <p align="center">
   <img src="./assets/blacklistedimports.png" alt="" width="500">
   <br>
-  **Example of blacklisted chaincode import vulnerability in chaincode**
+  Example of blacklisted chaincode import vulnerability in chaincode
 </p>
 Importing certain libraries may result in a lack of consensus between peers. This is because certain libraries will allow communication with the outside world, grant file access and can even introduce non-deterministic behaviour into chaincode. These can all lead to inconsistent computation between peers leading to a lack of consensus.
 One blacklisted library is the ‘time’ library. This library allows peers to get the current timestamp at a given time, however, it is unlikely that each peer will create the same timestamp during a transaction leading to discrepancies between peers. This can result in non-deterministic behaviour between peers, leading to inconsistent computation.
@@ -43,6 +43,8 @@ One blacklisted library is the ‘time’ library. This library allows peers to 
 ### Global state variables
 <p align="center">
   <img src="./assets/globalstate.png" alt="" width="500">
+  <br>
+  Example of global state variable vulnerability in chaincode
 </p>
 Global variables are only global to a single peer as global variables are not tracked on the ledger. Not ever peer will necessarily execute every transaction and as the global variable’s scope is limited to a single peer, their states may diverge. No data that is being read from or written to should depend on these global state variables as this can lead to computation with different read and write sets. This non-consistent computation will result in a lack of consensus between peers and therefore all transactions will be marked as invalid.
 
