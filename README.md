@@ -25,6 +25,13 @@ The tool is an extension of the Go open source static analysis tool <a href="htt
   Using $ revive on a directory
 </p>
 
+# Performance
+<p align="center">
+  <img src="./assets/performance.png" alt="" width="600">
+  <br>
+</p>
+To evaluate the performance of revive^CC, a variety of real case chaincode files were found which each contained vulnerabilities. A total of 20 public chaincode files were obtained for the evaluation from GitHub repositories. All these files were verified and the following vulnerabilities were reported. The performance was then compared with Chainsecurity's Chaincode Scanner which was only able to verify 13 out of the 20 files. Overall, revive^CC was able to detect more vulnerabilities.
+
 [![Build Status](https://travis-ci.org/mgechev/revive.svg?branch=master)](https://travis-ci.org/mgechev/revive)
 
 # revive
