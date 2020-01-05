@@ -3,9 +3,8 @@
 
 The tool is an extension of the open source Go static analysis tool for <a href="https://github.com/mgechev/revive">revive</a> and was built using revive's framework. It was built as a part of my dissertation project on 'Analysing Smart Contracts' at the University of Sheffield.
 
-# Detectable vulnerabilities
 
-# Installation
+## Installation
 1. Place folder in the your $GOPATH/src/github.com/youraccount
 2. Go into directory sivachokkapu/revive-cc
 3. $ make install
@@ -13,11 +12,10 @@ The tool is an extension of the open source Go static analysis tool for <a href=
 5. Move the revive file into $GOPATH/bin
 6. You should now be able to use revive commands
 
-# Usage
+## Usage
 - $ revive {chaincodefilename.go} - will analyse the file
 - $ revive -formatter stylish {chaincodefilename.go} - better output format
 - $ revive - on a directory will analyse all files if from the same package
-
 
 <p align="center">
   <img src="./assets/revive.png" alt="" width="600">
@@ -25,11 +23,21 @@ The tool is an extension of the open source Go static analysis tool for <a href=
   Using $ revive on a directory
 </p>
 
-# Performance
+## Performance
 <p align="center">
   <img src="./assets/performance.PNG" alt="" width="600">
 </p>
 To evaluate the performance of revive^CC, a variety of real case chaincode files were found which each contained vulnerabilities. A total of 20 public chaincode files were obtained for the evaluation from GitHub repositories. All these files were verified and the following vulnerabilities were reported. The performance was then compared with Chainsecurity's Chaincode Scanner which was only able to verify 13 out of the 20 files. Overall, revive^CC was able to detect more vulnerabilities.
+
+## Detectable vulnerabilities
+
+### Blacklisted chaincode imports
+Importing certain libraries may result in a lack of consensus between peers. This is because certain libraries will allow communication with the outside world, grant file access and can even introduce non-deterministic behaviour into chaincode. These can all lead to inconsistent computation between peers leading to a lack of consensus.
+One blacklisted library is the ‘time’ library. This library allows peers to get the current timestamp at a given time, however, it is unlikely that each peer will create the same timestamp during a transaction leading to discrepancies between peers. This can result in non-deterministic behaviour between peers, leading to inconsistent computation.
+
+### Global state variables
+Global variables are only global to a single peer as global variables are not tracked on the ledger. Not ever peer will necessarily execute every transaction and as the global variable’s scope is limited to a single peer, their states may diverge. No data that is being read from or written to should depend on these global state variables as this can lead to computation with different read and write sets. This non-consistent computation will result in a lack of consensus between peers and therefore all transactions will be marked as invalid.
+
 
 [![Build Status](https://travis-ci.org/mgechev/revive.svg?branch=master)](https://travis-ci.org/mgechev/revive)
 
