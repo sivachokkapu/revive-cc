@@ -1,5 +1,7 @@
 # revive^CC
-revive^CC is a static analysis tool for Hyperledger Fabric smart contracts (chaincode) aimed at detecting security vulnerabilities. The tool is an extension of the Go open source static analysis tool revive and was built using revive's framework. This tool was built for as a part of my dissertation project on 'Analysing Smart Contracts' at the University of Sheffield.
+revive^CC is a static analysis tool for Hyperledger Fabric smart contracts (chaincode) aimed at detecting blockchain related security vulnerabilities. The tool is an extension of the Go open source static analysis tool revive and was built using revive's framework. This tool was built for as a part of my dissertation project on 'Analysing Smart Contracts' at the University of Sheffield.
+
+# Detectable vulnerabilities
 
 # Installation
 1. Place folder in the your $GOPATH/src/github.com/youraccount
@@ -8,12 +10,11 @@ revive^CC is a static analysis tool for Hyperledger Fabric smart contracts (chai
 4. $ make build
 5. Move the revive file into $GOPATH/bin
 6. You should now be able to use revive commands
-7. $ revive {chaincodefilename.go} - will analyse the file
-8. $ revive -formatter stylish {chaincodefilename.go} - better output format
-9. $ revive - on a directory will analyse all files if from the same package
 
-
-
+# Usage
+$ revive {chaincodefilename.go} - will analyse the file
+$ revive -formatter stylish {chaincodefilename.go} - better output format
+$ revive - on a directory will analyse all files if from the same package
 
 [![Build Status](https://travis-ci.org/mgechev/revive.svg?branch=master)](https://travis-ci.org/mgechev/revive)
 
