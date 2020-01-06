@@ -5,17 +5,21 @@ The tool is an extension of the open source Go static analysis tool <a href="htt
 
 
 ## Installation
+```
 1. Place folder in the your $GOPATH/src/github.com/youraccount
 2. Go into directory sivachokkapu/revive-cc
 3. $ make install
 4. $ make build
 5. Move the revive file into $GOPATH/bin
 6. You should now be able to use revive commands
+```
 
 ## Usage
-- $ revive {chaincodefilename.go} - will analyse the file
-- $ revive -formatter stylish {chaincodefilename.go} - better output format
-- $ revive - on a directory will analyse all files if from the same package
+```
+$ revive {chaincodefilename.go} - will analyse the file
+$ revive -formatter stylish {chaincodefilename.go} - better output format
+$ revive - on a directory will analyse all files if from the same package
+```
 
 <p align="center">
   <img src="./assets/revive.png" alt="" width="600">
