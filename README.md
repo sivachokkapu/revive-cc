@@ -22,7 +22,7 @@ $ revive - on a directory will analyse all files if from the same package
 ```
 
 <p align="center">
-  <img src="./assets/revive.png" alt="" width="600">
+  <img src="./assets/revive.png" alt="" width="800">
   <br>
   Using $ revive on a directory
 </p>
