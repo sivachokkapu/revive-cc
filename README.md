@@ -31,7 +31,7 @@ $ revive - on a directory will analyse all files if from the same package
 <p align="center">
   <img src="./assets/performance.PNG" alt="" width="600">
 </p>
-To evaluate the performance of revive^CC, a variety of real case chaincode files were found which each contained vulnerabilities. A total of 20 public chaincode files were obtained for the evaluation from GitHub repositories. All these files were verified and the following vulnerabilities were reported. The performance was then compared with Chainsecurity's Chaincode Scanner which was only able to verify 13 out of the 20 files. Overall, revive^CC was able to detect more vulnerabilities (please note revive^cc does detect more false positives as well as true positives).
+To evaluate the performance of revive^CC, a variety of real case chaincode files were found which each contained vulnerabilities. A total of 20 public chaincode files were obtained for the evaluation from GitHub repositories. All these files were verified and the following vulnerabilities were reported. The performance was then compared with Chainsecurity's Chaincode Scanner which was only able to verify 13 out of the 20 files. Overall, revive^CC was able to detect more vulnerabilities (please note as revive^cc is able detect more true positives it also detects slightly more false positives).
 
 ## Detectable vulnerabilities
 
